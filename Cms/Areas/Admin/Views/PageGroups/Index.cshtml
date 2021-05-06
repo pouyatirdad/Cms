@@ -1,0 +1,90 @@
+﻿@model IEnumerable<DataLayer.PageGroup>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-success btn-sm" id="addnew">
+        افزودن
+        @*<i class="glyphicon glyphicon-new-window></i>*@
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupTitle)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupTitle)
+            </td>
+            <td>
+                <a class="btn btn-danger btn-sm " onclick=" DeleteModal(@item.GroupID) ">حذف</a>
+
+                <a class="btn btn-warning btn-sm " onclick=" EditModal(@item.GroupID) ">تغییر</a>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.GroupID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.GroupID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.GroupID })*@
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<!-- Modal -->
+<div class="modal" id="myModal" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="myModalBody" class="modal-body">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        $("#addnew").click(function () {
+
+            $.get("/Admin/PageGroups/Create", function (result) {
+                $("#myModal").modal();
+                $("#myModalTitle").html("افزودن ");
+                $("#myModalBody").html(result);
+            });
+        });
+
+        function DeleteModal(id) {
+              $.get("/Admin/PageGroups/Delete/"+id, function (result) {
+                $("#myModal").modal();
+                $("#myModalTitle").html("حذف ");
+                $("#myModalBody").html(result);
+            });
+        }
+
+        function EditModal(id) {
+                $.get("/Admin/PageGroups/edit/"+id, function (result) {
+                $("#myModal").modal();
+                $("#myModalTitle").html("ادیت ");
+                $("#myModalBody").html(result);
+            });
+        }
+
+    </script>
+}
