@@ -72,13 +72,19 @@
     <Compile Include="Migrations\202105071009123_addSliderInPage.designer.cs">
       <DependentUpon>202105071009123_addSliderInPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105071613004_create-tagsinpage.cs" />
+    <Compile Include="Migrations\202105071613004_create-tagsinpage.designer.cs">
+      <DependentUpon>202105071613004_create-tagsinpage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageComment.cs" />
     <Compile Include="Models\PageGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IPage.cs" />
+    <Compile Include="Repository\IPageComment.cs" />
     <Compile Include="Repository\IPageGroup.cs" />
+    <Compile Include="Services\PageCommentRepository.cs" />
     <Compile Include="Services\PageGroupRepository.cs" />
     <Compile Include="Services\PageRepository.cs" />
     <Compile Include="ViewModels\ShowGroupViewModel.cs" />
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105071009123_addSliderInPage.resx">
       <DependentUpon>202105071009123_addSliderInPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071613004_create-tagsinpage.resx">
+      <DependentUpon>202105071613004_create-tagsinpage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

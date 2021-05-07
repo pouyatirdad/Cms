@@ -50,6 +50,13 @@
         <dd>
             @Html.DisplayFor(model => model.Views)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Image)
@@ -58,7 +65,7 @@
         <dd>
             @if (Model.Image != null)
             {
-            <img src="~/PagesImages/@Model.Image" alt="image" style="max-width:130px" class="img-thumbnail" />
+                <img src="~/PagesImages/@Model.Image" alt="image" style="max-width:130px" class="img-thumbnail" />
             }
         </dd>
 

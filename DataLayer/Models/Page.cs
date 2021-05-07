@@ -28,9 +28,13 @@ namespace DataLayer
         [Display(Name = "بازدید")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public int Views { get; set; }
+        [Display(Name ="اسلایدر")]
         public bool Slider { get; set; }
         [Display(Name = "عکس")]
         public string Image { get; set; }
+        [Display(Name ="کلمات کلیدی")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        public string Tags { get; set; }
         [Display(Name = "تاریخ ایجاد")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [DisplayFormat(DataFormatString = "{0: yyyy/MM/dd }")]
