@@ -24,6 +24,10 @@
         <th>
             @Html.DisplayNameFor(model => model.Views)
         </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Slider)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CreateDate)
         </th>
@@ -46,6 +50,11 @@
     <td>
         @Html.DisplayFor(modelItem => item.Views)
     </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Slider)
+    </td>
+
     <td>
         @item.CreateDate.toShamsi();
     </td>

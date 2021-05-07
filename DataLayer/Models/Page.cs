@@ -28,12 +28,12 @@ namespace DataLayer
         [Display(Name = "بازدید")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public int Views { get; set; }
+        public bool Slider { get; set; }
         [Display(Name = "عکس")]
-        
         public string Image { get; set; }
         [Display(Name = "تاریخ ایجاد")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [DisplayFormat(DataFormatString ="{0: yyyy/MM/dd }")]
+        [DisplayFormat(DataFormatString = "{0: yyyy/MM/dd }")]
         public DateTime CreateDate { get; set; }
 
         public virtual List<PageComment> PageComments { get; set; }

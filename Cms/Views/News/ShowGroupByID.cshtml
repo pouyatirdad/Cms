@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DataLayer.Page>
+@{
+    ViewBag.Title = "ShowGroupByID";
+}
+
+    <div class="col-md-12 col-sm-12 col-xs-12 pull-left">
+
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">خانه </a></li>
+            <li class="breadcrumb-item"><a href="#">اخبار </a></li>
+            <li class="breadcrumb-item active"> @ViewBag.name </li>
+        </ul>
+
+        <!-- last news -->
+        <section class="last-news-section border-radius">
+            <header><i class="icons icon-doc-2"></i>  <h3> @ViewBag.name</h3> </header>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    if (@item != null)
+                    {
+
+                        <li>
+                            <img class="border-radius" src="~/PagesImages/@item.Image">
+                            <h2> <a href=""> @item.Title </a></h2>
+                            <p>
+                                @item.ShortDescription
+                            </p>
+                            <span class="date-publish"><i class="fa fa-calendar"></i> انتشار : @item.CreateDate.toShamsi() </span>
+                            <a href="" class="more-link"><i class="icons icon-more"></i></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <div>
+                            چیزی وجود ندارد
+                        </div>
+                    }
+                }
+            </ul>
+        </section>
+        <!-- End last news -->
+
+        
+    </div>

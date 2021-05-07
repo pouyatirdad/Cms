@@ -68,6 +68,10 @@
     <Compile Include="Migrations\202105061243006_removeimagerequired.designer.cs">
       <DependentUpon>202105061243006_removeimagerequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105071009123_addSliderInPage.cs" />
+    <Compile Include="Migrations\202105071009123_addSliderInPage.designer.cs">
+      <DependentUpon>202105071009123_addSliderInPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageComment.cs" />
@@ -77,6 +81,7 @@
     <Compile Include="Repository\IPageGroup.cs" />
     <Compile Include="Services\PageGroupRepository.cs" />
     <Compile Include="Services\PageRepository.cs" />
+    <Compile Include="ViewModels\ShowGroupViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -94,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105061243006_removeimagerequired.resx">
       <DependentUpon>202105061243006_removeimagerequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105071009123_addSliderInPage.resx">
+      <DependentUpon>202105071009123_addSliderInPage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

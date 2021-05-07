@@ -15,3 +15,4 @@ C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.csproj.GenerateRes
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.fixViewsTypeINPageModel.resources
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.fixima.resources
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.removeimagerequired.resources
+C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.addSliderInPage.resources

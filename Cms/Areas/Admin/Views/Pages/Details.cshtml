@@ -57,8 +57,17 @@
         <dd>
             @if (Model.Image != null)
             {
-            <img src="~/PagesImages/@Model.Image" alt="image" style="max-width:130px" class="img-thumbnail" />
+                <img src="~/PagesImages/@Model.Image" alt="image" style="max-width:130px" class="img-thumbnail" />
             }
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slider)
         </dd>
 
         <dt>

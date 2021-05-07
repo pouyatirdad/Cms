@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DataLayer.PageGroup>
+
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="/group/@item.GroupID/@item.GroupTitle">
+                @item.GroupTitle
+            </a>
+        </li>
+    }
+
+</ul>

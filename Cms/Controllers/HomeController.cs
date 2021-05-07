@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,14 @@ namespace Cms.Controllers
 {
     public class HomeController : Controller
     {
+        MYCmsContext db = new MYCmsContext();
+        private IPage pageRepository;
+
+        public HomeController()
+        {
+            pageRepository = new PageRepository(db);
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -25,6 +34,10 @@ namespace Cms.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Slider()
+        {
+            return PartialView(pageRepository.Slider());
         }
     }
 }

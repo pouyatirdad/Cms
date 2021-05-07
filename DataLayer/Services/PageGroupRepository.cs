@@ -91,5 +91,15 @@ namespace DataLayer.Services
         {
             db.Dispose();
         }
+
+        public IEnumerable<ShowGroupViewModel> GetGroupForView()
+        {
+            return db.pageGroups.Select(n => new ShowGroupViewModel()
+            {
+                GroupID = n.GroupID,
+                GroupTitle=n.GroupTitle,
+                PageCount=n.pages.Count
+            });
+        }
     }
 }
