@@ -15,6 +15,7 @@ namespace Cms.Controllers
         private IPage pageRepository;
         private IPageComment pageCommentRepository;
 
+
         public NewsController()
         {
             pageGroupRepository = new PageGroupRepository(db);
@@ -76,5 +77,7 @@ namespace Cms.Controllers
         {
             return PartialView(pageCommentRepository.GetAllCommentByID(id));
         }
+        
+   
     }
 }

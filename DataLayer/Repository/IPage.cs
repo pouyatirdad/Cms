@@ -20,5 +20,6 @@ namespace DataLayer
         IEnumerable<Page> Slider();
         IEnumerable<Page> Last(int num=4);
         IEnumerable<Page> ShowPageByGroupID(int id);
+        IEnumerable<Page> Search(string msg);
     }
 }
