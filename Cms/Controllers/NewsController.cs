@@ -77,7 +77,13 @@ namespace Cms.Controllers
         {
             return PartialView(pageCommentRepository.GetAllCommentByID(id));
         }
-        
-   
+        [Route("search")]
+        public ActionResult Search(string q)
+        {
+
+            ViewBag.name = q;
+            return View(pageRepository.Search(q));
+        }
+
     }
 }
