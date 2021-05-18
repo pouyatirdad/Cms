@@ -11,6 +11,7 @@ using DataLayer.Services;
 
 namespace Cms.Areas.Admin.Controllers
 {
+    [Authorize]
     public class PageGroupsController : Controller
     {
         private IPageGroup pageGroupRepository;

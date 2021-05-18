@@ -76,17 +76,25 @@
     <Compile Include="Migrations\202105071613004_create-tagsinpage.designer.cs">
       <DependentUpon>202105071613004_create-tagsinpage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105181517227_add-login.cs" />
+    <Compile Include="Migrations\202105181517227_add-login.designer.cs">
+      <DependentUpon>202105181517227_add-login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageComment.cs" />
     <Compile Include="Models\PageGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ILogin.cs" />
     <Compile Include="Repository\IPage.cs" />
     <Compile Include="Repository\IPageComment.cs" />
     <Compile Include="Repository\IPageGroup.cs" />
+    <Compile Include="Services\LoginRepository.cs" />
     <Compile Include="Services\PageCommentRepository.cs" />
     <Compile Include="Services\PageGroupRepository.cs" />
     <Compile Include="Services\PageRepository.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ShowGroupViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105071613004_create-tagsinpage.resx">
       <DependentUpon>202105071613004_create-tagsinpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105181517227_add-login.resx">
+      <DependentUpon>202105181517227_add-login.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

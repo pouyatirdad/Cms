@@ -66,8 +66,18 @@
             <ul>
                 <li><a href="/"> صفحه اصلی </a></li>
                 <li><a href="/archive"> آرشیو </a></li>
-                <li><a href=""> ثبت نام </a></li>
-                <li><a href=""> ورود به سایت </a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <li><a href=""> @User.Identity.Name </a></li>
+
+                    <li><a href="/login/signout"> خروج </a></li>
+                }
+                else
+                {
+
+                    <li><a href="/login/index"> ورود به سایت </a></li>
+                }
                 <li>
                     <span>گروه های خبری</span>
                     @Html.Action("showgroupmenu", "news")
@@ -82,9 +92,15 @@
 
             <aside class="col-md-4 col-sm-12 col-xs-12 pull-right">
 
-               @Html.Action("showgroups","news")
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a href="/admin/pages">  مدیریت صفحه ها</a></li>
+                    <li><a href="/admin/pagegroups">  مدیریت گروه ها</a></li>
+                }
+
+                @Html.Action("showgroups", "news")
                 <!-- most views news -->
-               @Html.Action("topnews","news")
+                @Html.Action("topnews", "news")
                 <!-- end most views news -->
             </aside>
 
@@ -138,6 +154,7 @@
     <script src="/Content/js/bootstrap.min.js"></script>
     <script src="/Content/js/owl.carousel.js"></script>
     <script src="/Content/js/script.js"></script>
+    @RenderSection("Scripts",false)
 </body>
 </html>
 

@@ -12,6 +12,7 @@ using DataLayer.Services;
 
 namespace Cms.Areas.Admin.Controllers
 {
+    [Authorize]
     public class PagesController : Controller
     {
         private IPage pageRepository;
@@ -34,6 +35,7 @@ namespace Cms.Areas.Admin.Controllers
         }
 
         // GET: Admin/Pages/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)

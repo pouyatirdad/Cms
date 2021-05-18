@@ -17,3 +17,4 @@ C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.fixima.
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.removeimagerequired.resources
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.addSliderInPage.resources
 C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.createtagsinpage.resources
+C:\Users\pouya\source\repos\Cms\DataLayer\obj\Debug\DataLayer.Migrations.addlogin.resources
