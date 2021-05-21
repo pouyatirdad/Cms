@@ -24,6 +24,7 @@ namespace DataLayer
         [Display(Name = "متن")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [DataType(DataType.MultilineText)]
+
         public string Text { get; set; }
         [Display(Name = "بازدید")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]

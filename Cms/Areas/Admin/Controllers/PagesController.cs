@@ -51,6 +51,7 @@ namespace Cms.Areas.Admin.Controllers
         }
 
         // GET: Admin/Pages/Create
+        
         public ActionResult Create()
         {
             ViewBag.GroupID = new SelectList(pageGroupRepository.GetAllGroup(), "GroupID", "GroupTitle");
@@ -62,6 +63,7 @@ namespace Cms.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "PageID,GroupID,Title,ShortDescription,Text,Views,Image,Slider,CreateDate,Tags")] Page page, HttpPostedFileBase UploadIMG)
         {
             if (ModelState.IsValid)
@@ -107,6 +109,7 @@ namespace Cms.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "PageID,GroupID,Title,ShortDescription,Text,Views,Image,Slider,CreateDate,Tags")] Page page, HttpPostedFileBase UploadIMG)
         {
             if (ModelState.IsValid)
